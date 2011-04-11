@@ -7,7 +7,7 @@ if exists("loaded_git_pair")
 endif
 let loaded_git_pair = 1
 
-let s:git_pair_initials = "%{system('git config user.initials')}"
+let s:git_pair_initials = "%{git_pair#statusline()}"
 
 if &statusline == ""
   set statusline=%<%f\ %h%m%r%=
